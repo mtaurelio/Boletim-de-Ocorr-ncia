@@ -1,0 +1,106 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Formulário de Cadastro</title>
+</head>
+
+<body>
+  <div class="container-formulario">
+    <img id="imagemBoletim" src="./img/PoliciaSp.png" alt="Policia SP">
+
+    <h1>Boletim de Ocorrência - B O </h1>
+    <p class="subtitulo">Formulário destinado ao registro de ocorrências para fins de análise e investigação pela polícia civil. Preencha com atenção todos os campos necessários.</p>
+
+    <h2>Delegacia de Policia</h2>
+    <form action="">
+      <label for="tipoOcorrencia">Unidade responsável pela ocorrência:</label>
+      <select class="data" id="tipoOcorrencia" name="tipoOcorrencia" required>
+        <option value="" disabled selected>Selecione uma delegacia</option>
+        <option value="dhpp">DEIC (Departamento Estadual de Investigações Criminais)
+        </option>
+        <option value="dhpp">DHPP (Departamento de Homicídios e Proteção à Pessoa)</option>
+        <option value="delegaciaMulher"> DDM (Delegacia da Mulher) </option>
+        <option value="deatur">DEATUR (Delegacia de Atendimento ao Turista)</option>
+        <option value="crimesInformaticos">DRCI (Delegacia de Repressão aos Crimes Informáticos)</option>
+      </select>
+
+      <label for="dataRegistro">Data do registro:</label>
+      <input type="date" id="dataRegistro" class="data" name="dataRegistro" required>
+
+      <label for="horario">Horário:</label>
+      <input type="time" class="data" name="horario" required>
+
+      <label for="delegadoPlantao">Delegado no plantão:</label>
+      <input type="text" id="delegadoPlantao" class="data" name="delegadoPlantao" required>
+    </form>
+
+
+    <div class="container-ocorrencias">
+      <h2>Ocorrências</h2>
+      <form action="">
+        <label for="tipoOcorrencia">Tipo de Ocorrência:</label>
+        <select class="data" id="tipoOcorrencia" name="tipoOcorrencia" required>
+          <option value="" disabled selected>Selecione uma ocorrência</option>
+          <option value="perdaDocumentos">Perda de documentos</option>
+          <option value="perdaObjetos">Perda de objetos</option>
+          <option value="perdaCelulares">Perda de celulares</option>
+          <option value="perdaPlacasVeiculos">Perda de placas de veículos</option>
+          <option value="perdaBicicletas">Perda de bicicletas</option>
+          <option value="furtoSimples">Furto simples</option>
+          <option value="rouboVeiculos">Roubo de veículos</option>
+          <option value="rouboCelulares">Roubo de celulares</option>
+          <option value="rouboObjetos">Roubo de objetos</option>
+          <option value="acidenteTransito">Acidente de trânsito sem vítimas</option>
+          <option value="desaparecimentoPessoas">Desaparecimento de pessoas</option>
+          <option value="encontroPessoasDesaparecidas">Encontro de pessoas desaparecidas</option>
+          <option value="vandalismo">Vandalismo e danos ao patrimônio</option>
+          <option value="fraudeEstelionato">Fraude e estelionato</option>
+          <option value="furtoFiosCabos">Furto de fios e/ou cabos em vias públicas</option>
+          <option value="injuriaCaluniaDifamacao">Injúria, calúnia ou difamação</option>
+          <option value="violenciaDomestica">Violência doméstica contra mulher</option>
+        </select>
+      </form>
+      <label>Descrição da ocorrência</label>
+      <textarea name="descrição" id=""></textarea>
+      <label for="">Data do ocorrido</label>
+      <input type="date" class="data">
+      <label for="">Horário:</label>
+      <input type="time" class="data">
+
+    </div>
+    <div>
+      <h2>Parecer da autoridade</h2>
+      <textarea name="descrição" id=""></textarea>
+    </div>
+    <div>
+      <h2>Envolvidos</h2>
+
+      <form action="">
+        <label for="descricaoOcorrido">Descrição do ocorrido:</label>
+        <textarea id="descricaoOcorrido" name="descricaoOcorrido"></textarea>
+
+        <label for="bensEnvolvidos">Bens envolvidos:</label>
+        <textarea id="bensEnvolvidos" name="bensEnvolvidos"></textarea>
+
+        <label for="dinamicaFatos">Dinâmica real dos fatos:</label>
+        <textarea id="dinamicaFatos" name="dinamicaFatos"></textarea>
+      </form>
+
+
+      <button class="button" onclick="gerarPDF()">Gerar PDF</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

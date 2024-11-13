@@ -1,0 +1,80 @@
+body {
+  display: flex; /** oque alinha o container no meio do site*/
+  justify-content: center; /** oque alinha o container no meio do site*/
+  align-items: center; /** oque alinha o container no meio do site*/
+  min-height: 100vh; /** oque alinha o container no meio do site*/
+  margin: 0; /** oque alinha o container no meio do site*/
+  background: rgb(250, 247, 247);
+  font-family: "Poppins";
+}
+
+img {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.container-formulario {
+  background: rgb(241, 230, 232);
+  padding: 100px; /**  Espaço entre o contêiner e as "paredes" */
+  margin-top: 50px; /**  Espaço entre o contêiner e o "teto" */
+  margin-bottom: 50px; /**  Espaço entre o contêiner e o "chão" */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 100%;
+}
+
+input {
+  display: block;
+}
+
+label {
+  display: block;
+  margin-bottom: 2px;
+  /* font-weight: bold; opcional, para destacar o rótulo */
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  min-height: 8vh;
+  font-family: sans-serif;
+  font-size: 15px; /* Ajuste o tamanho da fonte */
+  color: #333; /* Cor do texto */
+}
+h2 {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+h1 {
+  font-size: 28px; /** Boletim de Ocorrencia */
+  margin: 0px;
+}
+
+.subtitulo {
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.data {
+  font-size: 15px;
+}
+
+.button {
+  background: rgb(15, 161, 64);
+  border-radius: 4px;
+  padding: 10px 10px 10px 10px;
+  font-weight: bold;
+  font-family: poppins;
+  display: block;
+  margin: 0 auto;
+}
+
+.button:hover {
+  background: rgb(23, 194, 80);
+  padding: 11px 11px 11px 11px;
+}
